@@ -1,10 +1,17 @@
 # kickstart.nvim
 
-https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b
-
 ### My Shortcuts
+
 #### Harpoon
-|<leader> t | 
+|Shortcut | Description |
+| :- | :--- |
+|leader t | Add current file to harpoon list |
+|leader h | Show harpooned files list|
+|CTRL h | Quick navigate files menu/navigate to 1st file|
+|CTRL j |Navigate to 2nd file in list |
+|CTRL k |Navigate to 3rd file in list |
+|CTRL l |Navigate to 4th file in list |
+| | |
 
 ### Introduction
 
