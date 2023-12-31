@@ -1,19 +1,12 @@
-add plugins 
-	* vim smooth scroll
-	* vim surround
-	* vim css color?
-	* git blame
-	* coc.nvim
-	* nvim treesitter
-
+Other stuff:
 have harpoon's ctrl h show available files
+* vim motion highlight everything inside parentheses, quotes, etc
+* when on current line how to get to character faster?
 
-
-Remaps:
-	* better searching for stuff?
-	* when on current line how to get to character faster?
-	* When in visual mode tab indent using []
-	* undotree
-	* vim-fugitive
-    * add comment
-    * vim motion highlight everything inside parentheses, quotes, etc
+add plugins 
+	* vim css color?
+	* git blame?
+	* coc.nvim?
+	* nvim treesitter?
+    * undotree
+        * went with telescope-undo, idk how to use yet

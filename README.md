@@ -22,6 +22,15 @@
 |CTRL k | N | Navigate to 3rd file in list | |
 |CTRL l | N | Navigate to 4th file in list | |
 
+
+#### Nvim-Surround
+|Shortcut | Mode | Description | Justification/Extra Details|
+| :- | :- |:--- |:--- |
+|ysiw) |  | (surround with parentheses)| |
+|ys$" |  | "surround with quotes" | |
+|ds] |  | delete [] around | |
+
+
 ### Keymap Notes
 f+character and F+character find next and previous character respectively 
 
