@@ -9,6 +9,7 @@
 |J/K |V | Select lines and use J & K to move the lines around | Moving blocks|
 |leader p | X | Paste over something won't lose what you have copied though  | Don't lose your paste buffer after pasting over something |
 |leader y/Y | N/V | Copy to system clipboard  | Copy to system clipboard so you can have more control over vim and system clipboard|
+|CTRL t | N/V | Toggle Line Comments | Fast toggling of comments |
 | | | | |
 
 #### Harpoon

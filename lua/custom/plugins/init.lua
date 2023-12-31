@@ -4,6 +4,7 @@
 -- See the kickstart.nvim README for more information
 --
 --
+require("custom.plugins.comment")
 require("custom.plugins.markdown_preview")
 require("custom.plugins.harpoon")
 return {
