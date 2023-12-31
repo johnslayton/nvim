@@ -15,4 +15,5 @@ Remaps:
 	* When in visual mode tab indent using []
 	* undotree
 	* vim-fugitive
+    * add comment
     * vim motion highlight everything inside parentheses, quotes, etc
