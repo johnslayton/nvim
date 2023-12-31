@@ -7,5 +7,8 @@
 require("custom.plugins.comment")
 require("custom.plugins.markdown_preview")
 require("custom.plugins.harpoon")
+require("custom.plugins.neoscroll")
+require("custom.plugins.telescope-undo")
+require("custom.plugins.nvim-surround")
 return {
 }
