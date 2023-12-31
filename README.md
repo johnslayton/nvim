@@ -1,20 +1,30 @@
 # kickstart.nvim
 
 ### My Shortcuts
+#### Basic Remaps
+<leader>pv
+|Shortcut | Mode | Description | Justification|
+| :- | :- |:--- |:--- |
+|leader pv | N | Return back to file explorer  | Don't have to type out ":Ex" to go back |
+|J/K |V | Select lines and use J & K to move the lines around | Moving blocks|
+|leader p | X | Paste over something won't lose what you have copied though  | Don't lose your paste buffer after pasting over something |
+|leader y/Y | N/V | Copy to system clipboard  | Copy to system clipboard so you can have more control over vim and system clipboard|
+| | | | |
 
 #### Harpoon
-|Shortcut | Description |
-| :- | :--- |
-|leader t | Add current file to harpoon list |
-|leader h | Show harpooned files list|
-|CTRL h | Quick navigate files menu/navigate to 1st file|
-|CTRL j |Navigate to 2nd file in list |
-|CTRL k |Navigate to 3rd file in list |
-|CTRL l |Navigate to 4th file in list |
-| | |
+|Shortcut | Mode | Description | Justification/Extra Details|
+| :- | :- |:--- |:--- |
+|leader t | N | Add current file to harpoon list | Add current file to harpoon list |
+|leader h |  N | Show harpooned files list| Show list for easy navigation |
+|CTRL h | N | Quick navigate files menu/navigate to 1st file| Have to use this before the following commands|
+|CTRL j | N | Navigate to 2nd file in list | |
+|CTRL k | N | Navigate to 3rd file in list | |
+|CTRL l | N | Navigate to 4th file in list | |
+
+### Keymap Notes
+f+character and F+character find next and previous character respectively 
 
 ### Introduction
-
 A starting point for Neovim that is:
 
 * Small
