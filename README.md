@@ -21,6 +21,7 @@
 |CTRL j | N | Navigate to 2nd file in list | |
 |CTRL k | N | Navigate to 3rd file in list | |
 |CTRL l | N | Navigate to 4th file in list | |
+| | | | |
 
 ### Keymap Notes
 f+character and F+character find next and previous character respectively 
