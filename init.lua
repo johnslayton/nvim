@@ -41,6 +41,7 @@ P.S. You can delete this when you're done too. It's your config now :)
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -267,7 +268,7 @@ require('lazy').setup({
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
 { import = 'custom.plugins' },
 }, {})
-
+require("custom.remaps")
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -280,6 +281,19 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.scrolloff = 8
+
+-- Old settings, may remove
+vim.opt.wrap = false
+
+vim.opt.smartindent = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.colorcolumn = "80"
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
