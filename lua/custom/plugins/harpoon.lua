@@ -1,17 +1,24 @@
-return { "ThePrimeagen/harpoon",
-	branch = "harpoon2",
-	config = function()
-		local harpoon = require("harpoon")
-		---@diagnostic disable-next-line: missing-parameter
-		harpoon:setup()
-		local function map(lhs, rhs, opts)
-                vim.keymap.set("n", lhs, rhs, opts or {})
-		end
-		map("<leader>t", function() harpoon:list():append() end)
-		map("<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-		map("<c-h><c-h>", function() harpoon:list():select(1) end)
-		map("<c-h><c-j>", function() harpoon:list():select(2) end)
-		map("<c-h><c-k>", function() harpoon:list():select(3) end)
-		map("<c-h><c-l>", function() harpoon:list():select(4) end)
-	end
+return {
+  'ThePrimeagen/harpoon',
+  config = function()
+    require("telescope").load_extension('harpoon')
+    require("harpoon").setup{
+      -- set marks specific to each git branch inside git repository
+      mark_branch = false,
+    }
+    local mark = require("harpoon.mark")
+    vim.keymap.set('n', '<leader>ha', mark.add_file)
+    vim.keymap.set('n', '<leader>hr', mark.rm_file)
+
+    local ui = require("harpoon.ui")
+    vim.keymap.set('n', '<leader>hn', ui.nav_next)
+    vim.keymap.set('n', '<leader>hp', ui.nav_prev)
+    vim.keymap.set('n', '<leader>hm', ui.toggle_quick_menu)
+    vim.keymap.set('n', '<leader>tm', require("telescope").extensions.harpoon.marks)
+
+    vim.keymap.set("n", "<C-1>", function() ui.nav_file(1) end)
+    vim.keymap.set("n", "<C-2>", function() ui.nav_file(2) end)
+    vim.keymap.set("n", "<C-3>", function() ui.nav_file(3) end)
+    vim.keymap.set("n", "<C-4>", function() ui.nav_file(4) end)
+  end
 }
