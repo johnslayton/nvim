@@ -3,6 +3,8 @@ have harpoon's ctrl h show available files
 * vim motion highlight everything inside parentheses, quotes, etc
 * when on current line how to get to character faster?
 
+get telescope working
+
 add plugins 
 	* vim css color?
 	* git blame?

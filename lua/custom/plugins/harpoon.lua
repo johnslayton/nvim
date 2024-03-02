@@ -1,17 +1,22 @@
-return { "ThePrimeagen/harpoon",
-	branch = "harpoon2",
-	config = function()
-		local harpoon = require("harpoon")
-		---@diagnostic disable-next-line: missing-parameter
-		harpoon:setup()
-		local function map(lhs, rhs, opts)
-                vim.keymap.set("n", lhs, rhs, opts or {})
-		end
-		map("<leader>t", function() harpoon:list():append() end)
-		map("<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-		map("<c-h><c-h>", function() harpoon:list():select(1) end)
-		map("<c-h><c-j>", function() harpoon:list():select(2) end)
-		map("<c-h><c-k>", function() harpoon:list():select(3) end)
-		map("<c-h><c-l>", function() harpoon:list():select(4) end)
-	end
+local harpoon -- Ensure we only interact with local harpoon object 🦈
+
+return {
+  'ThePrimeagen/harpoon',
+  branch = 'harpoon2', -- Temp; Will be merged soonish 🔥
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+  },
+  config = function ()
+    harpoon = require("harpoon"):setup() -- Notice we're storing to parent context 👆
+    local ui = harpoon.ui
+
+    vim.keymap.set("n", "<leader>ht", function() harpoon:list():append() end)
+    vim.keymap.set("n", "<leader>he", function() harpoon:list():remove() end)
+    vim.keymap.set("n", "<leader>hm", function() ui:toggle_quick_menu(harpoon:list()) end)
+
+    vim.keymap.set("n", "<C-1>", function() harpoon:list():select(1) end)
+    vim.keymap.set("n", "<C-2>", function() harpoon:list():select(2) end)
+    vim.keymap.set("n", "<C-3>", function() harpoon:list():select(3) end)
+    vim.keymap.set("n", "<C-4>", function() harpoon:list():select(4) end)
+  end,
 }
